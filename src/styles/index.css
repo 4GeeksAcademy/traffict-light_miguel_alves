@@ -39,3 +39,11 @@ align-items:center;
 .glow{
     box-shadow: 0px 0px 9px 9px white;
 }
+
+.tubo{
+    height: 100px;
+    width: 20px;
+    background-color: #333;
+   margin-left: 40%;
+
+}

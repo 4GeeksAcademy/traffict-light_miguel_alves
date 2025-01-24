@@ -5,15 +5,19 @@ import React, {useState} from "react";
 
 //create your first component
 const Home = () => {
-	const [color, setcolor] = useState("red")
+	const [color, setColor] = useState("")
+	
 	return (
-	  <div className="traffic-signal">
-		<div className="light red glow" onClick={setcolor(color)}></div>
-		<div className="light yellow" onClick={}></div>
-		<div className="light green"></div>
+		<div>
+		<div className="tubo"></div>
+	 <div className="traffic-signal">
+		<div className={`light red  ${color === "red" ? "glow" : ""}`} onClick={()=>setColor("red")}></div>
+		<div className={`light yellow  ${color === "yellow" ? "glow" : ""}`} onClick={()=>setColor("yellow")}></div>
+		<div className={`light green  ${color === "green" ? "glow" : ""}`} onClick={()=>setColor("green")}> </div>
+
 	  </div>
-	  
-	);
-};
+	  </div>
+	); 
+};              
 
 export default Home;
